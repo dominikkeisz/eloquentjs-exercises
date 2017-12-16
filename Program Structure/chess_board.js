@@ -12,5 +12,6 @@ for (let line = 0; line < size; line++) {
     }
     chessBoard += '\n';
 }
+// comment
 
 console.log(chessBoard);
