@@ -1,0 +1,27 @@
+function every(array, expression) {
+    for (var i = 0; i < array.length; i++) {
+        if (expression(array[i])) {
+            continue;
+        } else if (!expression(array[i])) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(every([NaN, NaN, NaN], isNaN));
+console.log(every([NaN, NaN, 4], isNaN));
+
+function some(array, expression) {
+    for (var i = 0; i < array.length; i++) {
+        if (expression(array[i])) {
+            return true;
+        } else if (!expression(array[i])) {
+            continue;
+        }
+    }
+    return false;
+}
+
+console.log(some([NaN, 3, 4], isNaN));
+console.log(some([2, 3, 4], isNaN));
